@@ -6,3 +6,5 @@ api-version: '1.20'
 commands:
   hello:
     description: "Diz olá"
+  site:
+    description: "Envia o site do servidor no chat"
