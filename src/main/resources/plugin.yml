@@ -1,0 +1,8 @@
+name: JavaForBukkit
+version: '${version}'
+main: br.dev.brunnofdc.javaforbukkit.JavaForBukkit
+api-version: '1.20'
+
+commands:
+  hello:
+    description: "Diz olá"
