@@ -1,10 +1,12 @@
 package br.dev.brunnofdc.javaforbukkit;
 
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import br.dev.brunnofdc.javaforbukkit.comandos.HelloComando;
 import br.dev.brunnofdc.javaforbukkit.comandos.SiteComando;
+import br.dev.brunnofdc.javaforbukkit.listener.PlacaInteracaoLixeiraListener;
 
 public final class JavaForBukkit extends JavaPlugin {
     private static FileConfiguration config;
@@ -19,6 +21,8 @@ public final class JavaForBukkit extends JavaPlugin {
 
         getCommand("hello").setExecutor(new HelloComando());
         getCommand("site").setExecutor(new SiteComando());
+
+        Bukkit.getPluginManager().registerEvents(new PlacaInteracaoLixeiraListener(), this);
     }
 
     @Override
